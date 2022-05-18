@@ -2,12 +2,13 @@ import React from "react";
 import styles from '../navbar.module.css';
 
 export const Links = () =>{
+  const LinksArr =["Services", "Projects", "About"]
     return(
       <>
       <ul className={styles.links}>
-           <li>Services</li>
-          <li>Projects</li>
-          <li>About</li>
+        {LinksArr.map((link)=>(
+          <li key={link}>{link}</li>
+        ))}
           </ul>
           </>
       
